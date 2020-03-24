@@ -1,0 +1,716 @@
+@import './scaffolding.scss';
+@import './variables.scss';
+
+body{
+    color:white;
+    background-color: #000;
+}
+
+@media(max-width: $mobile-width-only){
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        top: 0;
+    }
+    
+    .content{
+        margin-top: 100px;
+    }
+}
+
+.page-header{
+    position: fixed;
+    background-color: $bg-darkgrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    top: 0;
+}
+
+.header-logo{
+    color: white;
+    font-family: 'HelveticaNeue-Bold', sans-serif;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.header-lot-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    order: 1;
+    list-style-type: none;
+    border-top: 1px solid rgb(0, 0, 0);
+    height: 50px;
+    width: 100%;
+    a{
+        margin-left: 10px;
+    }
+
+    .title{
+        flex-wrap: wrap;
+        text-align: center;
+        margin-right: 40px;
+        color: #464646;
+        font-family: 'HelveticaNeue-Bold', sans-serif;
+        font-size: 19px;
+        width: 100%;
+    }
+
+    
+}
+
+.lot_img_slider{
+    display: none;
+}
+
+.lot_info_wrapper{
+    display: none;
+}
+
+.breadcrumbs{
+    display: none;
+}
+
+.about_lot{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .about_title{
+        margin: 0px 0px 13px 24px;
+        color: #4D4D4D;
+        font-family: 'HelveticaNeue-Regular', sans-serif;
+        font-size: 18px;
+    }
+    .about_text{
+        margin: 0px 26px;
+        text-align: left;
+        color: #AFAFAF;
+        font-family: 'HelveticaNeue-Regular', sans-serif;
+        font-size: 12px;
+    }
+}
+
+.charact_lot{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .charact_title{
+        margin: 0px 0px 13px 24px;
+        color: #4D4D4D;
+        font-family: 'HelveticaNeue-Regular', sans-serif;
+        font-size: 18px;
+    }
+    .charact_text{
+        margin: 0px 26px;
+        text-align: left;
+        color: #AFAFAF;
+        font-family: 'HelveticaNeue-Regular', sans-serif;
+        font-size: 12px;
+    }
+}
+
+.section_two{
+    display: none;
+}
+
+
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    .topic_title{
+        display: none;
+    }
+        .item-info{
+            flex-wrap: wrap;
+            margin: 17px 58px 0px 58px;
+            .item-title, .item-lot{
+                padding: 0;
+                margin: 0;
+            }
+            .item-title{
+                text-align: left;
+                line-height: 17px;
+                color: #A8A8A8;
+                font-family: 'HelveticaNeue-Bold', sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .item-lot{
+                line-height: 17px;
+                color: #9F9F9F;
+                font-family: 'HelveticaNeue-Regular', sans-serif;
+                font-size: 11px;
+            }
+        }
+  
+        .item-wrapper-one{
+            display: flex;
+            
+            margin: 13px 0 0 30px;
+        
+                .price-info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    margin-top: 23px;
+        
+                    h3{
+                        padding: 0;
+                        margin: 5px 0 0 0;
+                        color: #9F9F9F;
+                        font-family: 'HelveticaNeue-Regular', sans-serif;
+                        font-size: 13px;
+                    }
+                    p{
+                        padding: 0;
+                        margin: 13px 0px 0px 0px;
+                        color: #fff;
+                        font-family: 'HelveticaNeue-Bold', sans-serif;
+                        font-size: 33px;
+                        font-weight: bold;
+                    }
+                    .history_link{
+                        padding: 0;
+                        margin-top: 13px;
+                        text-decoration: none;
+                        color: #459938;
+                        font-family: 'HelveticaNeue-Regular', sans-serif;
+                        font-size: 14px;
+                        &:hover{
+                            color: #6ac94d;
+                        }
+                    } 
+                }
+            }
+    
+    
+    .item-wrapper-two{
+    display: flex;
+    align-items: flex-start;
+    padding-top: 19px;
+    margin-left: 40px;
+    width: 250px;
+
+    .status-img{
+        img{
+            padding-top: 13px;
+        }
+    }
+
+    .status-info{
+        display: flex;
+        flex-direction: column;
+        h3{
+            padding: 0;
+            margin: 0 0 0 0;
+            color: #A8A8A8;
+            font-family: 'HelveticaNeue-Bold', sans-serif;
+            font-size: 21px;
+            text-align: right;
+        }
+        h4{
+            padding: 0;
+            margin: 23px 0 0 0;
+            color: #606060;
+            font-family: 'HelveticaNeue-Regular', sans-serif;
+            font-size: 12px;
+            text-align: right;
+            
+        }
+        p{
+            padding: 0;
+            margin: 6px 0 0 0;
+            color: #A8A8A8;
+            font-family: 'HelveticaNeue-Regular', sans-serif;
+            font-size: 17px;
+            text-align: right;
+        }
+    }
+}
+
+     .give{
+        cursor: default;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 37px auto 0;
+        font-family: 'HelveticaNeue-Bold', sans-serif;
+        font-size: 15px;
+        text-decoration: none;
+        width: 272px;
+        color: #606060;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #333333;
+    }
+
+}
+
+
+
+@media (min-width: $tablet-width){
+    body{
+        width: 100%;
+    }
+
+    .lot-img{
+        display: none;
+    }
+
+    aside{
+        .menu-auth{
+            margin-top: 0px;
+        }
+        .menu-auth-open{
+            width: 400px;
+            
+        }
+    }
+
+
+    main{
+        .content{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: left;
+            width: 100%;
+  
+            .first_section{
+           
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                
+                width: 50%;
+                margin-top: 100px;
+                    .item-info{
+                        margin:20px auto 20px 45px;
+                        .item-title{
+                            display: flex;
+                            align-items: center;
+                            text-align: left;
+                            margin: 0;
+                            width: 100%;
+                            font-family: 'HelveticaNeue-Bold', sans-serif;
+                            font-size: 24px;
+                        }
+                        .item-lot{
+                            // text-align: center;
+                            margin-top: 10px;
+                            width: auto;
+                            font-family: 'HelveticaNeue-Regular', sans-serif;
+                            font-size: 12px;
+                         }
+                        }
+                
+                        .item-wrapper-one{
+                            margin: 0 0 0 45px;
+                            .price-info{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                margin-top: 0;
+                                p{
+                                    margin-top: 0;
+                                }
+                                .history_link{
+                                    margin-left: 40px;
+                                }  
+                            }
+                        }
+                    .item-wrapper-two{
+                        width: 100%;
+                        align-items: center;
+                        justify-content: left;
+                        width: auto;
+                        margin-left: 45px;
+                        .status-info{
+                            margin: 0;
+                            h3{
+                                text-align: left;
+                            }
+                            h4{
+                               text-align: left;
+                            }
+                            p{
+                                text-align: left;
+                            }
+                        }
+                        .status-img{
+                            margin-left: 40px;
+                            order: 1;
+                        }
+                    }
+           
+                   
+                    .item-img{
+                        display: none;
+                    }
+                  
+               
+                .show_more{
+                    display: none;
+                }
+            }
+
+        .section_two{
+            display: flex;
+            margin-top: 100px;
+            width: 50%;
+                .lot-img{
+                    display: none;
+                }
+                .lot_img_slider{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    
+                    margin: 0 auto 30px;
+                    order: 2;
+                    width: 300px;
+                    height: 300px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .prevbtn{
+                        cursor: pointer;
+                        display: flex;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -150px;
+                        left: 10px;
+ 
+                        margin: 0;
+                        // width: 20px;
+                        img{
+                            width: 40px;
+                        }
+                    }
+                    .nextbtn{
+                        cursor: pointer;
+                        display: flex;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -150px;
+                        right: 10px;
+                        // display: flex;
+                        // width: auto;
+                        margin: 0;
+                        // width: 40px;
+                        img{
+                            width: 40px;
+                        }
+                    }
+            }    
+
+            .charact_lot{
+                margin-top: 40px;
+            }
+            .show_more{
+                display: none;
+            }
+    }
+
+    
+    .give{
+        margin-left: 45px;
+    }
+
+      
+        }
+
+    }
+
+}
+
+@media (min-width: $desktop-width) and (max-width: 1640px){
+    body{
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .page-header{
+            position: fixed;
+            z-index: 100;
+            width: 75%;
+            height: 74px;
+    
+            .header-logo{
+                margin-left: 50px;
+            }
+            .header-lot-info{
+                display: none;
+    
+            }
+            .menu-toggle{
+                display: none;
+            }
+        }
+
+     
+        main{
+            width: 75%;
+            height: 100%;
+            .content{
+                display: flex;
+                justify-content: left;
+                flex-direction: row;
+                width: 100%;
+                height: 100%;
+
+                
+         .first_section{
+            width: auto;
+            margin: 100px 0 0 40px;
+            height: 100%;
+            .topic_title{
+                display: block;
+                margin: 0;
+                width: 100%;
+                color: #4D4D4D;
+                font-family: 'HelveticaNeue-Regular', sans-serif;
+                font-weight: normal;
+                font-size: 34px;
+                background-color: black;
+            }
+         
+            .item-wrapper-one{
+                margin-left: 0px;
+                .price-info{
+                    margin-top: 0;
+                }
+                }
+                .item-info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-left: 0;
+                    width: 100%;
+                    .item-title{
+                        display: flex;
+                        align-items: center;
+                        text-align: left;
+                        margin: 0;
+                        width: auto;
+                        font-family: 'HelveticaNeue-Bold', sans-serif;
+                        font-size: 24px;
+                    }
+                    .item-lot{
+
+                        width: auto;
+                        font-family: 'HelveticaNeue-Regular', sans-serif;
+                        font-size: 12px;
+                    }
+                }
+
+                .item-wrapper-two{
+                    margin-left: 0;
+                }
+                
+          
+
+                .give{
+                 margin: 20px 0 30px 0;
+                }
+            }
+         
+
+         .section_two{
+           display: flex;
+            flex-direction: column;
+            width: auto;
+             height: 100%;
+             margin: 100px 0 0 0px;
+            .section_two_wrapper{
+                display: flex;
+                flex-direction: column;
+
+                width: 350px;
+                // height: 100%;
+                margin-bottom: 30px;
+                .lot_img_slider{
+                    order: 0;
+                }
+         }
+         
+       
+            .show_more{
+                    display: none;
+                }
+            } 
+        }  
+        }
+    }
+}
+
+@media (min-width: 1640px){
+    body{
+        display: flex;
+        // height: 100vh;
+        width: 100%;
+
+        .page-header{
+            position: fixed;
+            z-index: 400;
+            width: 80%;
+            height: 74px;
+    
+            .header-logo{
+                margin-left: 50px;
+            }
+            .header-lot-info{
+                display: none;
+    
+            }
+            .menu-toggle{
+                display: none;
+            }
+        }
+
+     
+      
+        main{
+            width: 80%;
+            height: 100%;
+            .content{
+         
+                display: flex;
+                justify-content: left;
+                flex-direction: row;
+                width: 100%;
+                height: 100%;
+
+        
+                .first_section{
+                    width: auto;
+                    margin: 100px 0 0 67px;
+                    height: 100%;
+         
+                    .topic_title{
+                        display: block;
+                        margin: 0;
+                        width: 100%;
+                        color: #4D4D4D;
+                        font-family: 'HelveticaNeue-Regular', sans-serif;
+                        font-weight: normal;
+                        font-size: 34px;
+                        background-color: black;
+                    }
+                    .item-wrapper-one{
+                        margin:60px 0 0 0px;
+                        .price-info{
+                            margin: 20px 0 20px;
+                            div{
+                                h3{
+                                    font-size: 18px;
+                                }
+                                p{
+                                    font-size: 38px;
+                                }
+                            }
+                            .history_link{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+          
+                     .item-info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin: 56px 0 0 0;
+                    width: 100%;
+
+                    .item-title{
+                        display: flex;
+                        align-items: center;
+                        text-align: left;
+                        margin: 0;
+                        width: 100%;
+                        font-family: 'HelveticaNeue-Bold', sans-serif;
+                        font-size: 34px;
+                    }
+                    .item-lot{
+
+                        width: auto;
+                        font-family: 'HelveticaNeue-Regular', sans-serif;
+                        font-size: 16px;
+                     }
+                
+                        }
+        
+                        .item-wrapper-two{
+                            padding: 0;
+                            margin-left: 0;
+                            width: auto;
+                            .status-info{
+                                h3{
+                                    font-size: 34px;
+                                }
+                                h4{
+                                    font-size: 19px;
+                                }
+                                p{
+                                    font-size: 27px;
+                                }
+                            }
+                            .status-img{
+                                width: 177px;
+                                height: 177px;
+                            }
+                        }
+        
+                        .give{
+                            margin: 72px 0 0 0;
+                        }
+                    }
+         
+
+            .section_two{
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                 margin: 100px 0 0 160px;
+                .section_two_wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    width: 505px;
+                    margin-bottom: 30px;
+                    .lot_img_slider{
+                        order: 0;
+                        width: 460px;
+                        height: auto;
+                    }
+                
+
+                      .about_lot, .charact_lot{
+                          h2{
+                            font-family: 'HelveticaNeue-Regular', sans-serif;
+                            font-size: 20px;
+                          }
+                          p{
+                              color: #AFAFAF;
+                              font-size: 16px;
+                          }
+                      }
+             }
+      
+                .show_more{
+                        display: none;
+                    }
+                }
+          }   
+        } 
+    }
+}
+

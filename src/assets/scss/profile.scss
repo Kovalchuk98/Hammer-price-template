@@ -1,0 +1,882 @@
+@import "./variables.scss";
+@import "./scaffolding.scss";
+
+body{
+    width: 100%;
+    height: 100%;
+    color:white;
+    background-color: #000;
+}
+
+@media(max-width: $mobile-width-only){
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        top: 0;
+    }
+
+    .content{
+        margin-top: 100px;
+    }
+}
+
+.page-header{
+    position: fixed;
+    background-color: $bg-darkgrey;
+    display: flex;
+    z-index: 100;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    top: 0;
+}
+
+.header-logo{
+    color: white;
+    font-family: 'HelveticaNeue-Bold', sans-serif;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.header-lot-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        order: 1;
+        list-style-type: none;
+        border-top: 1px solid rgb(0, 0, 0);
+        height: 50px;
+        width: 100%;
+        a{
+            margin-left: 10px;
+        }
+
+        .title{
+            flex-wrap: wrap;
+            text-align: center;
+            margin-right: 40px;
+            color: #464646;
+            font-family: 'HelveticaNeue-Bold', sans-serif;
+            font-size: 19px;
+            width: 100%;
+        }
+ 
+        
+}
+
+.lot_info_wrapper{
+    display: none;
+}
+
+.breadcrumbs{
+    display: none;
+}
+
+
+.content{
+
+.first_section{
+
+    .content_title{
+        display: none;
+    }
+    .user-profile_wrapper{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 76px;
+
+        .user_name{
+            color: #A8A8A8;
+            font-family: 'HelveticaNeue-Bold', sans-serif;
+            font-size: 22px;
+            margin: 25px auto;
+        }
+        // Avatar
+        .profile_img{
+            margin: 0;
+            display: block;
+            width: 168px;
+            height: 168px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        
+        .functions_wrapper{
+            margin-top: 24px;
+            display: flex;
+            width: 168px;
+            justify-content: space-between;
+            
+            a{
+                cursor: pointer;
+                padding: 0;
+                text-decoration: none;
+                color: #459938;
+                font-family: 'HelveticaNeue-Regular', sans-serif;
+                font-size: 14px;
+                &:hover{
+                    color: #6ac94d;
+                }
+            }
+        }
+
+        .tokens{       
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 156px;
+            border-radius: 4px;
+            margin: 33px auto 0;
+            text-align: center;
+            background-color: #459938;
+            height: 42px;
+            p{
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .pass_change{
+            cursor: pointer;
+            margin-top: 35px;
+            text-decoration: none;
+            color: #459938;
+            font-family: 'HelveticaNeue-Regular', sans-serif;
+            font-size: 14px;
+        }
+
+    }
+
+}
+
+.second_section{
+
+.inputs_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .title-contact{
+        margin: 30px auto 0;
+        color: #4D4D4D;
+        font-family: 'HelveticaNeue-Regular', sans-serif;
+        font-size: 18px;
+
+    }
+    .input-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+        border-radius: 4px;
+        padding: 0;
+        margin: 0px 6px 0px 6px;
+        &:not(:last-of-type){
+            margin-bottom: 0px;
+        }
+        .input-list-item{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+        
+            .item_wrapper{
+                display: flex;
+                flex-direction: column;
+                
+                width: 100%;
+                margin:15px 25px 0px 25px;
+            
+                p{
+                    margin: 0;
+                    color: #6A6A6A;
+                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                    font-size: 14px;
+                }
+                .info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-top: 3px;
+                    p{
+                        color: #A8A8A8;
+                        font-family: 'HelveticaNeue-Bold', sans-serif;
+                        font-size: 16px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: #459938;
+                        font-family: 'HelveticaNeue-Bold', sans-serif;
+                        font-size: 16px;
+                        &:hover{
+                            color: #6ac94d;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        align-items: center;
+        .title-payment{
+            margin: 30px auto 0;
+            color: #4D4D4D;
+            font-family: 'HelveticaNeue-Regular', sans-serif;
+            font-size: 18px;
+        }
+        .card_connect{
+            margin: 12px auto 0;
+            color: #4D4D4D;
+            font-family: 'HelveticaNeue-Regular', sans-serif;
+            font-size: 14px;
+        }
+        .card_wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            a{
+                cursor: pointer;
+                text-decoration: none;
+                color: #459938;
+                font-family: 'HelveticaNeue-Regular', sans-serif;
+                font-size: 14px;
+                &:hover{
+                    color: #6ac94d;
+                }
+            }
+        }
+
+
+    }
+
+    .title-alert{
+        margin: 40px auto 0;
+        color: #4D4D4D;
+        font-family: 'HelveticaNeue-Regular', sans-serif;
+        font-size: 18px;
+
+    }
+    .alert-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+        border-radius: 4px;
+        padding: 0;
+        
+    
+        .alert-list-item{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 85%;
+                div{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            
+        }
+    }
+}
+
+.bet-history{
+    justify-content: center;
+    width: 100%;
+    .title{
+        margin:0;
+        margin: 20px 0px 20px 24px;
+        padding: 0;
+        color: #4D4D4D;
+        font-family: 'HelveticaNeue-Regular', sans-serif;
+        font-size: 18px;
+    }
+    p{
+        margin: 0;
+
+    }
+
+    .bet-history-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 18px auto 0;
+        padding: 0;
+            width: 100%;
+            .title-history{
+                margin: 0 auto 16px;
+            color: #4D4D4D;
+            font-family: 'HelveticaNeue-Regular', sans-serif;
+            font-size: 18px;
+            }
+        .history-list-item{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            width: 100%;
+            &:not(:last-of-type){
+                margin-bottom: 18px;
+            }
+            .date{
+                margin-left: 25px;
+                color: #A8A8A8;
+                font-family: 'HelveticaNeue-Regular', sans-serif;
+                font-size: 12px;
+            }
+            div{
+                display: flex;
+                margin-left: 40px;
+                .number_token{
+                    color: #A8A8A8;
+                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                    font-size: 12px;
+                }
+                .varopl{
+                    margin-left: 30px;
+                    color: #A8A8A8;
+                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .show_more{
+        outline: none;
+        user-select: none;
+        color: $bg-button-1;
+        font-size: 15px;
+        margin: 0 auto;
+        background-color: transparent;
+        border:0;
+        width: 100%;
+        cursor: pointer;
+        padding: 18px 0px 40px 0px;
+    }
+}
+
+.exit{
+    text-decoration: none;
+    .exit_btn{
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 40px 0px;
+    
+        h2{
+            font-family: 'HelveticaNeue-Regular', sans-serif;
+            font-size: 20px;
+            margin: 0 0 0 12px;
+            color: #A34747;
+        
+            // color: white;
+        }
+    }
+}
+}
+}
+
+
+@media (min-width: $tablet-width){
+   
+
+    
+  .content{
+  
+      .first_section{
+        margin-top: 100px;
+
+              .user-profile_wrapper{
+                  .profile_img{
+                      width: 250px;
+                      height: 250px;
+                  }
+                  .functions_wrapper{
+                      width: 250px;
+                  }
+              }    
+      }
+
+      .second_section{
+          .inputs_wrapper{
+              .input-list{
+                  .input-list-item{
+                      .item_wrapper{
+                          margin: 15px 60px 0;
+                      }
+                  }
+              }
+          }
+          
+          .bet-history{
+              .bet_wrapper{
+   
+                .bet-history-list{
+                    .history-list-item{
+                       justify-content: center;
+                       P{
+                           font-size: 16px;
+                           div{
+                               font-size: 16px;
+                           }
+                       }
+                    }
+                 }
+              }
+            
+          }  
+      } 
+  }
+
+  aside{
+    .menu-auth{
+        margin-top: 0px;
+    }
+    .menu-auth-open{
+        width: 400px;
+        
+    }
+}
+   
+}
+
+@media(min-width: $desktop-width) {
+    
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        width: 75%;
+        height: 74px;
+
+        .header-logo{
+            margin-left: 50px;
+        }
+        .header-lot-info{
+            display: none;
+        }
+        .menu-toggle{
+            display: none;
+        }
+    }
+ 
+    .exit{
+        display: none;
+    }
+    main{
+        width: 75%;
+        height: 100%;
+        .content{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            
+            .first_section{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 74px 0 0 20px;
+                .content_title{
+                    display: flex;
+                    color: #464646;
+                    font-family: 'HelveticaNeue-Bold', sans-serif;
+                    font-size: 34px;
+                }
+                .user-profile_wrapper{
+                    margin: 0;
+                    align-items: flex-start;
+                    .user_name{
+                        order: 1;
+                        margin-left: 0;
+                    }
+                    .profile_img{
+                        width: 168px;
+                        height: 168px;
+                    }
+                    .functions_wrapper{
+                        width: 100%;
+                    }
+                    .pass_change{
+                        display: none;
+                    }
+                    .tokens{
+                        order: 2;
+                        margin: 0px 0 0 0px;
+                        margin-left: 0;
+                    }
+                }
+               
+            }
+            .second_section{
+                padding: 156px 0 0 0px;
+                width: 50%;
+                margin: 0 30px;
+                flex-grow: 1;
+
+                  .inputs_wrapper{
+                     
+                    .input-list{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: left;
+                        width: auto;
+                        background-color: #222222;
+                        padding-bottom: 40px;
+                        margin: 0px 0 0 0;
+                        .title-contact{
+                            width: 100%;
+                            margin: 23px 0 0 20px;
+                            align-self: start;
+                          }
+                        .input-list-item{
+                            width: 50%;
+                            .item_wrapper{
+                                margin:15px 20px 0px 20px;
+                            }
+                        }
+                    }
+
+                    .alert-list{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: left;
+                        margin-top: 24px;
+                        background-color: #222222;
+                        padding-bottom: 20px;
+                        
+                        .title-alert{
+                            width: 100%;
+                            margin: 25px 0 0 20px;
+                            align-self: start;
+                          }
+                        .alert-list-item{
+                            display: flex;
+                            width: 50%;
+                      
+                            div{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 100%;
+                                margin: 0 20px;
+                               
+                            }
+                            
+                           
+                        }
+                    }
+                  
+                    .card{
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #222222 ;
+                        width: 100%;
+                        margin-top: 15px;
+                        border-radius: 4px;
+                        align-items: flex-start;
+                        .title-payment{
+                            margin: 20px 0 0 30px;
+                            color: #4D4D4D;
+                            font-family: 'HelveticaNeue-Regular', sans-serif;
+                            font-size: 18px;
+                        }
+                        .card_connect{
+                            margin: 15px 0 0 30px;
+                            color: #4D4D4D;
+                            font-family: 'HelveticaNeue-Regular', sans-serif;
+                            font-size: 14px;
+                        }
+                        .card_wrapper{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            margin: 13px 0 20px 30px;
+                            width: auto;
+                            p{
+                                margin-left: 13px;
+                            }
+
+                            a{
+                                cursor: pointer;
+                                margin-left: 40px;
+                                text-decoration: none;
+                                color: #459938;
+                                font-family: 'HelveticaNeue-Regular', sans-serif;
+                                font-size: 16px;
+                            }
+                        }
+              
+                    }
+                    .bet-history{
+                        margin-bottom: 40px;
+                        .bet-history-list{
+                            .title-history{
+                                margin: 20px 0 20px 34px;
+                            }
+                            .history-list-item{
+                       
+                                justify-content: left;
+                                p{
+                                    margin-left: 34px;
+                                }
+                            }
+
+                        }
+                        .show_more{
+                            display: none;
+                        }
+                     
+                    }
+                 
+                    .exit{
+                       
+                        text-decoration: none;
+                        .exit_btn{
+                            display: flex;
+                            align-items: center;
+                            margin: 0px 0px 40px 0px;
+                      
+                            h2{
+                                font-family: 'HelveticaNeue-Regular', sans-serif;
+                                font-size: 20px;
+                                margin: 0 0 0 12px;
+                                color: #A34747;
+                          
+                                // color: white;
+                            }
+                        }
+                    }
+                  }
+            }
+        }
+    }
+}  
+
+
+@media(min-width: 1640px){
+    
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        width: 80%;
+        height: 74px;
+
+        .header-logo{
+            margin-left: 50px;
+        }
+        .header-lot-info{
+            display: none;
+        }
+        .menu-toggle{
+            display: none;
+        }
+    }
+    .show_more{
+        display: none;
+    }
+    .exit{
+        display: none;
+    }
+    main{
+        width: 80%;
+        height: 100%;
+        .content{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+
+
+            .first_section{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 74px 0 0 67px;
+                // flex-grow: 1;
+                .content_title{
+                    display: flex;
+                    color: #464646;
+                    font-family: 'HelveticaNeue-Bold', sans-serif;
+                    font-size: 34px;
+                }
+                .user-profile_wrapper{
+                    margin: 0;
+                    .user_name{
+                        order: 1;
+                        margin-left: 0;
+                    }
+                    .profile_img{
+                        width: 168px;
+                        height: 168px;
+                    }
+                    .pass_change{
+                        display: none;
+                    }
+                    .tokens{
+                        order: 2;
+                        margin: 0px 0 0 0px;
+                    }
+                }
+            }
+            .second_section{
+                padding: 150px 0 0 0px;
+                margin-left: 118px;
+
+                  .inputs_wrapper{
+                    align-items: flex-start;
+                    
+                    .input-list{
+                        width: 730px;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: left;
+                        margin: 0;
+                        background-color: #222222;
+                        padding-bottom: 40px;
+                        .title-contact{
+                            width: 100%;
+                            margin: 24px 0 0 30px;
+                            align-self: start;
+                          }
+                        .input-list-item{
+                            width: 50%;
+                            .item_wrapper{
+                                margin: 15px 30px 0 30px;
+                            }
+                        }
+                    }
+
+                    .alert-list{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: left;
+                        margin-top: 24px;
+                        width: 730px;
+                        background-color: #222222;
+                        padding-bottom: 48px;
+                        .title-alert{
+                            width: 100%;
+                            margin: 25px 0 0 30px;
+                          }
+                        .alert-list-item{
+                            display: flex;
+                            width: 50%;
+                            margin-top: 20px;
+                            div{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 100%;
+                                margin: 0 30px;
+                                p{
+                                    align-self: flex-start;
+                                    margin: 0;
+                                }
+                            }
+                            
+                           
+                        }
+                    }
+                    .card{
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #222222 ;
+                        width: 730px;
+                        border-radius: 4px;
+                        align-items: flex-start;
+                        .title-payment{
+                            margin: 20px 0 0 30px;
+                            color: #4D4D4D;
+                            font-family: 'HelveticaNeue-Regular', sans-serif;
+                            font-size: 18px;
+                        }
+                        .card_connect{
+                            margin: 15px 0 0 30px;
+                            color: #4D4D4D;
+                            font-family: 'HelveticaNeue-Regular', sans-serif;
+                            font-size: 14px;
+                        }
+                        .card_wrapper{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            margin: 13px 0 20px 30px;
+                            p{
+                                margin-left: 13px;
+                            }
+
+                            a{
+                                cursor: pointer;
+                                margin-left: 40px;
+                                text-decoration: none;
+                                color: #459938;
+                                font-family: 'HelveticaNeue-Regular', sans-serif;
+                                font-size: 14px;
+                            }
+                        }
+              
+                    }
+                    .bet-history{
+                        margin-top: 20px;
+                        .bet-history-list{
+                            .title-history{
+                                margin: 0 0 10px 34px;
+                            }
+                            .history-list-item{
+                                justify-content: left;
+                                p{
+                                    margin:0px 0 0 34px;
+                                }
+                                div{
+                                    margin-left: 90px;
+                                }
+                            }
+
+                        }
+                    }
+                    .exit{
+                       
+                        text-decoration: none;
+                        .exit_btn{
+                            display: flex;
+                            align-items: center;
+                            margin: 0px 0px 40px 0px;
+                      
+                            h2{
+                                font-family: 'HelveticaNeue-Regular', sans-serif;
+                                font-size: 20px;
+                                margin: 0 0 0 12px;
+                                color: #A34747;
+                          
+                                // color: white;
+                            }
+                        }
+                    }
+                  }
+            }
+        }
+    }
+} 

@@ -1,0 +1,344 @@
+@import "./variables.scss";
+@import "./scaffolding.scss";
+
+body{
+    color:white;
+    background-color: #000;
+}
+
+@media(max-width: $mobile-width-only){
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        top: 0; 
+    }
+
+    .content{
+        margin-top: 120px;
+    }
+}
+
+.page-header{
+    position: fixed;
+    background-color: $bg-darkgrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    top: 0;
+}
+
+.header-logo{
+    color: white;
+    font-family: 'HelveticaNeue-Bold', sans-serif;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.header-lot-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    order: 1;
+    list-style-type: none;
+    border-top: 1px solid rgb(0, 0, 0);
+    height: 50px;
+    width: 100%;
+    a{
+        margin-left: 10px;
+    }
+
+    .title{
+        flex-wrap: wrap;
+        text-align: center;
+        margin-right: 40px;
+        color: #464646;
+        font-family: 'HelveticaNeue-Bold', sans-serif;
+        font-size: 19px;
+        width: 100%;
+    }   
+}
+.breadcrumbs{
+    display: none;
+}
+
+
+
+.show_more{
+    outline: none;
+    user-select: none;
+    color: $bg-button-1;
+    font-size: 15px;
+    margin: 0 auto;
+    background-color: transparent;
+    border:0;
+    width: 100%;
+    cursor: pointer;
+    padding: 20px 0px 34px 0px;
+}
+
+main{
+    .content{
+        .first_section{
+            .content_title{
+                display: none;
+            }
+            .alerts_wrapper{
+                width: 100%;
+                .alert-list{
+                    list-style-type: none;
+                    padding: 0;
+                    .alert-list-item{
+                        border-radius: 4px;
+                        margin: 12px 15px;
+                        a{
+                            display: flex;
+                            text-decoration: none;
+                            width: 100%;
+                            height: 100%;
+                            .alert_wrapper{
+                                width: 100%;
+                                .alert-header_wrapper{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    padding: 13px 9px 0 16px;
+                                    .alert_date{
+                                        padding: 0;
+                                        margin: 0;
+                                        font-size: 12px;
+                                        color: #606060;
+                                        font-family: 'HelveticaNeue-Regular', sans-serif;
+                                    }
+                                }
+                                .alert_status{
+                                    margin: 10px 0 0 16px;
+                                    font-size: 14px;
+                                    color: #A8A8A8;
+                                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                                }
+                                .alert_lot_name{
+                                    color: #A8A8A8;
+                                    margin: 8px 0 0 16px;
+                                    font-size: 16px;
+                                    font-family: 'HelveticaNeue-Bold', sans-serif;
+                                }
+                                .alert_lot_number{
+                                    color: #707070;
+                                    margin: 10px 0 8px 16px;
+                                    padding-bottom: 8px;
+                                    font-size: 12px;
+                                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                                }
+                                .daily_tokens{
+                                    color: #707070;
+                                    margin: 10px 0 8px 16px;
+                                    padding-bottom: 18px;
+                                    font-size: 21px;
+                                    font-family: 'HelveticaNeue-Bold', sans-serif;
+                                }
+                            }
+                        }
+                    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(min-width: $tablet-width){
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        height: 100px;
+        top: 0;
+        margin-top: 0;
+
+        .header-logo{
+            margin-left: 50px;
+        }
+        .header-lot-info{
+            display: none;
+        }
+        .menu-toggle{
+            display: flex;
+        }
+
+        .header-lot-info{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            order: 1;
+            list-style-type: none;
+            border-top: 1px solid rgb(0, 0, 0);
+            height: 50px;
+            width: 100%;
+            a{
+                margin-left: 10px;
+            }
+        
+            .title{
+                flex-wrap: wrap;
+                text-align: center;
+                margin-right: 40px;
+                color: #464646;
+                font-family: 'HelveticaNeue-Bold', sans-serif;
+                font-size: 19px;
+                width: 100%;
+            } 
+        }
+    }
+    
+    main{
+        .content{
+          margin-top: 120px;
+        }
+    }
+    aside{
+        .menu-auth{
+            margin-top: 0px;
+        }
+        .menu-auth-open{
+            width: 400px;
+            
+        }
+    }
+}
+
+@media(min-width: $desktop-width){ 
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        width: 75%;
+        height: 74px;
+
+        .header-logo{
+            margin-left: 50px;
+        }
+        .header-lot-info{
+            display: none;
+        }
+        .menu-toggle{
+            display: none;
+        }
+    }
+
+    .show_more{
+        display: none;
+    }
+    main{
+        width: 75%;
+        height: 100%;
+        .content{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            margin-top: 0px;
+            
+            .first_section{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                margin: 74px 0 0 40px;
+                flex-grow: 1;
+                .content_title{
+                    display: flex;
+                    color: #464646;
+                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                    font-size: 34px;
+                    margin: 27px 0 0 15px;
+                }
+                .alerts_wrapper{
+                    width: auto;
+                    .alert-list{
+                        list-style-type: none;
+                        padding: 0;
+                        margin-right: auto;
+                        .alert-list-item{
+                            border-radius: 4px;
+                            margin: 12px 15px;
+                            width: 600px;
+                            .alert_wrapper{
+                                .alert-header_wrapper{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    padding: 13px 9px 0 16px;
+                                    .alert_date{
+                                        padding: 0;
+                                        margin: 0;
+                                        font-size: 12px;
+                                        font-family: 'HelveticaNeue-Regular', sans-serif;
+                                    }
+                                }
+                                .alert_status{
+                                    margin: 10px 0 0 16px;
+                                    font-size: 14px;
+                                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                                }
+                                .alert_lot_name{
+                                    color: #A8A8A8;
+                                    margin: 8px 0 0 16px;
+                                    font-size: 16px;
+                                    font-family: 'HelveticaNeue-Bold', sans-serif;
+                                }
+                                .alert_lot_number{
+                                    color: #707070;
+                                    margin: 10px 0 8px 16px;
+                                    padding-bottom: 8px;
+                                    font-size: 12px;
+                                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                                }
+                                .daily_tokens{
+                                    color: #707070;
+                                    margin: 10px 0 8px 16px;
+                                    padding-bottom: 18px;
+                                    font-size: 21px;
+                                    font-family: 'HelveticaNeue-Bold', sans-serif;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1640px){
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        width: 80%;
+        height: 74px;
+
+        .header-logo{
+            margin-left: 50px;
+        }
+        .header-lot-info{
+            display: none;
+        }
+        .menu-toggle{
+            display: none;
+        }
+    }
+
+    main{
+        width: 80%;
+        height: 100%;
+        .content{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            margin-top: 0px;
+        }
+    }
+
+}
+

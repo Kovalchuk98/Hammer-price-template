@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="20" viewBox="0 0 103 20">
+  <defs>
+  <style>
+      .arc{
+        fill: #4444;
+        width: 20px;
+        overflow: hidden;
+      }
+
+    <linearGradient id="linear-gradient" x1="1" y1="0.5" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#005886"/>
+      <stop offset="1" stop-color="#003a55"/>
+    </linearGradient>
+
+    </style>
+  </defs>
+  <path id="Rectangle_177" data-name="Rectangle 177" d="M4,0h99a0,0,0,0,1,0,0V20a0,0,0,0,1,0,0H4a4,4,0,0,1-4-4V4A4,4,0,0,1,4,0Z" fill="url(#linear-gradient)"/>
+</svg>

@@ -1,0 +1,213 @@
+@import "./variables.scss";
+@import "./scaffolding.scss";
+
+body{
+    width: 100%;
+    height: 100%;
+    color:white;
+    background-color: #000;
+}
+
+@media(max-width: $mobile-width-only){
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        top: 0;
+    }
+
+    .content{
+        margin-top: 100px;
+    }
+}
+
+.page-header{
+    position: fixed;
+    background-color: $bg-darkgrey;
+    display: flex;
+    z-index: 100;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    top: 0;
+}
+
+.header-logo{
+    color: white;
+    font-family: 'HelveticaNeue-Bold', sans-serif;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.header-lot-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        order: 1;
+        list-style-type: none;
+        border-top: 1px solid rgb(0, 0, 0);
+        height: 50px;
+        width: 100%;
+        a{
+            margin-left: 10px;
+        }
+
+        .title{
+            flex-wrap: wrap;
+            text-align: center;
+            margin-right: 40px;
+            color: #464646;
+            font-family: 'HelveticaNeue-Bold', sans-serif;
+            font-size: 19px;
+            width: 100%;
+        }  
+}
+
+
+.content{
+
+    .first_section{
+    display: flex;
+    justify-content: center;
+        .content_title{
+            display: none;
+        }
+        .user-profile_wrapper{
+            width: 168px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 76px;
+    
+            .user_name{
+                color: #A8A8A8;
+                font-family: 'HelveticaNeue-Bold', sans-serif;
+                font-size: 22px;
+                margin: 25px auto;
+            }
+            // Avatar
+            .profile_img{
+                margin: 0;
+                display: block;
+                width: 168px;
+                height: 168px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .reg_date{
+                p{
+                    text-align: center;
+                    color: #606060;
+                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                    font-size: 15px;
+                    margin: 23px 0 0 0;
+                }
+            }
+            .social_wrapper{ 
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                margin: 35px 0 0 0;
+            }
+        }
+    }
+}
+
+
+@media (min-width: $tablet-width){
+   
+    .content{
+            margin: 100px auto 0;
+        .first_section{
+                .user-profile_wrapper{
+                
+                    width: 250px;
+                    .profile_img{
+                        width: 250px;
+                        height: 250px;
+                    }
+                    .social_wrapper{
+                        width: 100%;
+                    }
+                }    
+        }
+    }
+    aside{
+      .menu-auth{
+          margin-top: 0px;
+      }
+      .menu-auth-open{
+          width: 400px;    
+      }
+  }    
+}
+
+@media(min-width: $desktop-width) {
+    
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        width: 75%;
+        height: 74px;
+
+        .header-logo{
+            margin-left: 50px;
+        }
+        .header-lot-info{
+            display: none;
+        }
+        .menu-toggle{
+            display: none;
+        }
+    }
+ 
+    main{
+        width: 75%;
+        height: 100%;
+        .content{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 100px;
+            .first_section{
+                display: flex;
+                .user-profile_wrapper{
+                   
+                    .profile_img{
+                        width: 250px;
+                        height: 250px;
+                    }
+                }
+               
+            }
+        }
+    }
+} 
+
+
+@media(min-width: 1640px){
+    
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        width: 80%;
+        height: 74px;
+    }
+    main{
+        width: 80%;
+        height: 100%;
+        .content{
+            .first_section{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+               
+            }
+        }
+    }
+} 

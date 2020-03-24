@@ -1,0 +1,364 @@
+@import "./scaffolding.scss";
+@import "./variables.scss";
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    color:white;
+    background-color: #000;
+}
+
+@media(max-width: $mobile-width-only){
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        top: 0;
+    }
+    
+    .content-list{
+        margin-top: 100px;
+    }
+}
+
+.breadcrumbs{
+    display: none;
+}
+
+
+.page-header{
+    position: fixed;
+    background-color: $bg-darkgrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    top: 0;
+}
+
+.header-logo{
+    color: white;
+    font-family: 'HelveticaNeue-Bold', sans-serif;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.header-lot-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    order: 1;
+    list-style-type: none;
+    border-top: 1px solid rgb(0, 0, 0);
+    height: 50px;
+    width: 100%;
+    a{
+        margin-left: 10px;
+    }
+
+    .title{
+        flex-wrap: wrap;
+        text-align: center;
+        margin-right: 40px;
+        color: #464646;
+        font-family: 'HelveticaNeue-Bold', sans-serif;
+        font-size: 19px;
+        width: 100%;
+    }
+
+    
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .content-list{
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        margin: 120px 12px 0px 12px;
+    
+        
+        h2{
+            display: none;
+        }
+
+        a{
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+        }
+        .content-list-item{
+            width: 100%;
+            margin-top: 10px;
+        
+            border-radius: 4px;
+            background-color: #252525;
+            transition: .4s ease;
+            &:hover,:active{
+                background-color: #3b3b3b !important;
+            }
+            a{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            .item-info{
+                width: 142px;
+                margin-left: 18px;
+
+                .item-title{
+                    color: #A8A8A8;
+                    font-family: 'HelveticaNeue-Bold', sans-serif;
+                    font-weight: bold;
+                    font-size: 12px;
+                    width: 125px;
+                }
+                .item-lot{
+                    color: #606060;
+                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                    font-size: 12px;
+                }
+            }
+
+            .item-status{
+                color: #606060;
+                font-family: 'HelveticaNeue-Regular', sans-serif;
+                font-size: 11px;
+                text-align: right;
+            }
+
+            .item-img{
+
+                height: 84px;
+                width: 84px;
+            }
+        }
+    }
+
+    .show_more{
+        user-select: none;
+        color: $bg-button-1;
+        font-size: 15px;
+        margin: 0 auto;
+        background-color: transparent;
+        border:0;
+        width: 100%;
+        cursor: pointer;
+        padding: 22px 0px 34px 0px;
+    }
+}
+
+
+@media (min-width: $tablet-width){
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+
+    aside{
+        .menu-auth{
+            margin-top: 0px;
+        }
+        .menu-auth-open{
+            width: 400px;
+            
+        }
+    }
+
+        main{  
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                
+                .content-list{
+                    margin: 120px 12px 0 12px;
+                    display: flex;
+                    flex-direction: column;
+                    width: auto;
+
+                    .content-list-item{
+                        margin-bottom: 18px;
+                            .item-info{
+                                width: 330px;
+                                .item-title{
+                                    font-size: 19px;
+                                    width: auto;
+                                }
+                                .item-lot{
+                                    font-size: 16px;
+                                  }
+                            }
+                            .item-status{
+                                width: 120px;
+                                p{
+                                    text-align: center;
+                                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                                    font-size: 18px;
+                                }
+                            }
+                            .item-img{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 150px;
+                                height: 150px;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    background-size: cover;
+                                    background-position-y: bottom;
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+
+}
+
+@media  screen and (min-width: $desktop-width) and (max-width: 1640px){
+    body{
+        display: flex;
+        width: 100%;
+   
+
+    .page-header{
+        position: fixed;
+        z-index: 100;
+        width: 75%;
+        height: 74px;
+
+        .header-logo{
+            margin-left: 50px;
+        }
+        .header-lot-info{
+            display: none;
+
+        }
+        .menu-toggle{
+            display: none;
+        }
+    }
+
+  
+
+    main{
+        width: 75%;
+        height: 100%;
+        .content{
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            flex-direction: row;
+            height: 100%;
+    
+            .content-list{
+                display: flex;
+                width: 630px;
+                 height: auto;
+                 margin: 100px 0 0 50px;
+
+                h2{
+                    display: block;
+                    margin-top: 0;
+                    width: 100%;
+                    color: #4D4D4D;
+                    font-family: 'HelveticaNeue-Regular', sans-serif;
+                    font-weight: normal;
+                    font-size: 34px;
+                    background-color: black;
+                }
+            
+
+                .content-list-item{
+                 
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 18px;
+                }
+            }
+            .show_more{
+                display: none;
+            }
+        }
+    }
+}
+}
+
+@media (min-width: 1640px){
+
+    body{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+
+        .page-header{
+            position: fixed;
+            z-index: 100;
+            width: 80%;
+            height: 74px;
+
+            .header-logo{
+                margin-left: 50px;
+            }
+            .header-lot-info{
+                display: none;
+            }
+            .menu-toggle{
+                display: none;
+            }
+        }
+
+        main{
+            width: 80%;
+            height: 100%;
+            .content{
+                width: 100%;
+                display: flex;
+                justify-content: left;
+                flex-direction: row;
+
+                .content-list{
+                    display: flex;
+                    width: 830px;
+                     height: auto;
+                     margin: 100px 0 0 67px;
+
+                        h2{
+                            display: block;
+                            margin: 0 auto 50px;
+                            width: 100%;
+                            color: #4D4D4D;
+                            font-family: 'HelveticaNeue-Regular', sans-serif;
+                            font-weight: normal;
+                            font-size: 34px;
+                            background-color: black;
+                        }
+                      
+        
+                        .content-list-item{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            margin-bottom: 18px;  
+                     }
+                }
+                .show_more{
+                    display: none;
+                }
+            }
+        }
+    }
+}
